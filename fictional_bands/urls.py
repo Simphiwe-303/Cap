@@ -2,9 +2,9 @@ from django.urls import path, include, re_path
 from . import views
 
 """
-	The app_name variable is used to separate this application urls from other application urls created in this project.
+The app_name variable is used to separate this application urls from other application urls created in this project.
 
-	The urlpatterns store the application's paths that the app uses to navigate.
+The urlpatterns store the application's paths that the app uses to navigate.
 """
 
 app_name = 'fictional_bands'
