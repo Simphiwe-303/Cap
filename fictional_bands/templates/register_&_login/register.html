@@ -1,0 +1,14 @@
+<html>
+	<h1>Register</h1>
+	<form method="POST" autocomplete="off">
+		{% csrf_token %}
+
+		{{ registration_form.as_p }}
+
+		<input type="submit" value="Register"/>
+	
+	<br/>
+	<br>Have an account?<a href="{% url 'fictional_bands:login' %}"> Login</a></br>
+	</form>
+	
+</html>

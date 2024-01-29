@@ -1,0 +1,20 @@
+<html>
+	<h1> Login as User </h1>
+
+	<form action="{% url 'fictional_bands:authenticate_user_login' %}" method="post" autocomplete="off">
+		{% csrf_token %}
+
+		<label>Username</label>
+		<input type="text" name="username" required>
+		<br/><br/>
+
+		<label>Password</label>
+		<input type="password" name="password" required>
+		<br/><br/>
+
+		<input type="submit" value="Login" />
+
+		<br/>
+		<br>Don't have an account?<a href="{% url 'fictional_bands:register' %}"> Register</a></br>
+	</form>
+</html>

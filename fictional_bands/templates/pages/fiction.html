@@ -1,0 +1,183 @@
+{% load static %}
+
+<html>
+	<head>
+		<title>overview</title>
+
+	</head>
+
+	<body>
+		<div class="partridge">
+			<img src="{% static 'images/partridge.jpg' %}"/>
+			<br/>
+			
+			{% if quest == 4 %}
+			<ul>
+				{% for choice in question.choice_set.all %}
+					<li>
+						Number of people who {{ choice.choice_text }} {{ question.question_text }} is: {{ choice.votes }}
+					</li>
+				{% endfor %}
+			</ul>
+			{% else %}
+			<br/>
+			{% endif %}
+			<br/>
+
+			<a href="https://www.youtube.com/watch?v=rlz-9WsJ9N4">Video of Partridge</a>
+		</div>
+		<br/><br/><br/>
+
+		<div class="blues">
+			<img src="{% static 'images/blues.jpg' %}" width=225 height=250/>
+			<br/>
+
+			{% if quest == 5 %}
+			<ul>
+				{% for choice in question.choice_set.all %}
+					<li>
+						Number of people who {{ choice.choice_text }} {{ question.question_text }} is: {{ choice.votes }}
+					</li>
+				{% endfor %}
+			</ul>
+			{% else %}
+			<br/>
+			{% endif %}
+			<br/>
+
+			<a href="https://www.youtube.com/watch?v=EHV0zs0kVGg">Video of Blues</a>
+		</div>
+		<br/><br/><br/>
+
+		<div class="ladies">
+			<img src="{% static 'images/fabulous.jpg' %}" width=225 height=250/>
+			<br/>
+
+			{% if quest == 6 %}
+			<ul>
+				{% for choice in question.choice_set.all %}
+					<li>
+						Number of people who {{ choice.choice_text }} {{ question.question_text }} is: {{ choice.votes }}
+					</li>
+				{% endfor %}
+			</ul>
+			{% else %}
+			<br/>
+			{% endif %}
+			<br/>
+
+			<a href="https://www.youtube.com/watch?v=dKbzuOW4600">Video of Ladies and Gentlemen</a>
+		</div>
+		<br/><br/><br/>
+
+		<div class="eddie">
+			<img src="{% static 'images/eddie.jpg' %}" width=200/>
+			<br/>
+
+			{% if quest == 7 %}
+			<ul>
+				{% for choice in question.choice_set.all %}
+					<li>
+						Number of people who {{ choice.choice_text }} {{ question.question_text }} is: {{ choice.votes }}
+					</li>
+				{% endfor %}
+			</ul>
+			{% else %}
+			<br/>
+			{% endif %}
+			<br/>
+
+			<a href="https://www.youtube.com/watch?v=Wk0Kckv-tqQ">Video of Eddie and the Cruisers</a>
+		</div>
+		<br/><br/><br/>
+
+		<div class="spinal">
+			<img src="{% static 'images/spinal.jpg' %}" width=200/>
+			<br/>
+
+			{% if quest == 8 %}
+			<ul>
+				{% for choice in question.choice_set.all %}
+					<li>
+						Number of people who {{ choice.choice_text }} {{ question.question_text }} is: {{ choice.votes }}
+					</li>
+				{% endfor %}
+			</ul>
+			{% else %}
+			<br/>
+			{% endif %}
+			<br/>
+
+			<a href="https://www.youtube.com/watch?v=RsOxgwF9LlM">Video of This is Spinal Tap</a>
+		</div>
+		<br/><br/><br/>
+
+		<div class="beets">
+			<img src="{% static 'images/beets.jpg' %}"/>
+			<br/>
+
+			{% if quest == 9 %}
+			<ul>
+				{% for choice in question.choice_set.all %}
+					<li>
+						Number of people who {{ choice.choice_text }} {{ question.question_text }} is: {{ choice.votes }}
+					</li>
+				{% endfor %}
+			</ul>
+			{% else %}
+			<br/>
+			{% endif %}
+			<br/>
+
+			<a href="https://www.youtube.com/watch?v=voVY3-Xe8KY">Video of The Beets from Doug</a>
+		</div>
+		<br/><br/><br/>
+
+		<div class="crucial">
+			<img src="{% static 'images/crucial.jpg' %}"/>
+			<br/>
+
+			{% if quest == 10 %}
+			<ul>
+				{% for choice in question.choice_set.all %}
+					<li>
+						Number of people who {{ choice.choice_text }} {{ question.question_text }} is: {{ choice.votes }}
+					</li>
+				{% endfor %}
+			</ul>
+			{% else %}
+			<br/>
+			{% endif %}
+			<br/>
+
+			<a href="#">Video of Crucial Taunt</a>
+		</div>
+		<br/><br/><br/>
+
+		<div class="stillwater">
+			<img src="{% static 'images/famous.jpg' %}"/>
+			<br/>
+
+			{% if quest == 11 %}
+			<ul>
+				{% for choice in question.choice_set.all %}
+					<li>
+						Number of people who {{ choice.choice_text }} {{ question.question_text }} is: {{ choice.votes }}
+					</li>
+				{% endfor %}
+			</ul>
+			{% else %}
+			<br/>
+			{% endif %}
+			<br/>
+
+			<a href="#">Video of Stillwater from Almost Famous</a>
+		</div>
+		<br/><br/>
+		<br>Other pages :</br>
+		<br/>
+		<a href="{% url 'fictional_bands:index' %}"> fictional </a>
+		<br/><br/>
+		<a href="{% url 'fictional_bands:voting' %}"> vote </a>
+	</body>
+</html>
