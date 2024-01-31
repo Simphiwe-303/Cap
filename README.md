@@ -10,10 +10,10 @@ cd Cap
 
 Make sure you have docker and that it is running
 
-docker build --tag <name> .
+docker build --tag /*<name>*/ .
 
-NB! <name> -> name your docker image with any name you like e.g myWebSite
+NB! /*<name>*/ -> name your docker image with any name you like e.g myWebSite
 
 ## When done with installations
 
-docker run --publish 8000:8000 <name>
+docker run --publish 8000:8000 /*<name>*/
