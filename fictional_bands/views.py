@@ -6,6 +6,11 @@ from .models import Question, Choice, CreateUserForm
 
 # Create your views here
 def user_register(request):
+	"""
+		This function will be used to register user to the app.
+
+		:returns: This will return the registration page.
+	"""
 	form = CreateUserForm()
 
 	if request.method == "POST":
@@ -19,10 +24,18 @@ def user_register(request):
 
 
 def user_login(request):
+	"""
+		If the user has an account already this function will be used
+
+		:returns: This return the user login page
+	"""
 	return render(request, 'register_&_login/login.html')
 			
 
 def authenticate_user_login(request):
+	"""
+		This authentication function authenticate if the user login details are accurate if so the user will be logged in.
+	"""
 	username = request.POST['username']
 	password = request.POST['password']
 	user = authenticate(username=username, password=password)

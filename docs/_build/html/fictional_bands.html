@@ -164,8 +164,9 @@
 <span id="fictional-bands-models-module"></span><h2>fictional_bands.models module<a class="headerlink" href="#module-fictional_bands.models" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fictional_bands.models.Choice">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fictional_bands.models.</span></span><span class="sig-name descname"><span class="pre">Choice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">question</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">choice_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">votes</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fictional_bands/models.html#Choice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fictional_bands.models.Choice" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fictional_bands.models.</span></span><span class="sig-name descname"><span class="pre">Choice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fictional_bands/models.html#Choice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fictional_bands.models.Choice" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>This class create The Choice model. This model will also be used by the admin to create choices that a user can select from regarding the questions that will be created in the Question model.</p>
 <dl class="py exception">
 <dt class="sig sig-object py" id="fictional_bands.models.Choice.DoesNotExist">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#fictional_bands.models.Choice.DoesNotExist" title="Link to this definition"></a></dt>
@@ -228,6 +229,7 @@ object the first time, the query is executed.</p>
 <dt class="sig sig-object py" id="fictional_bands.models.CreateUserForm">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fictional_bands.models.</span></span><span class="sig-name descname"><span class="pre">CreateUserForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fictional_bands/models.html#CreateUserForm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fictional_bands.models.CreateUserForm" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">UserCreationForm</span></code></p>
+<p>This model will be used by users when registering themselves in order to view the application content.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="fictional_bands.models.CreateUserForm.Meta">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/fictional_bands/models.html#CreateUserForm.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fictional_bands.models.CreateUserForm.Meta" title="Link to this definition"></a></dt>
@@ -265,8 +267,9 @@ object the first time, the query is executed.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="fictional_bands.models.Question">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fictional_bands.models.</span></span><span class="sig-name descname"><span class="pre">Question</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">question_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pub_date</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fictional_bands/models.html#Question"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fictional_bands.models.Question" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fictional_bands.models.</span></span><span class="sig-name descname"><span class="pre">Question</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fictional_bands/models.html#Question"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fictional_bands.models.Question" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>This class create the Question model. This model will be used by admin to create question for for users to answer.</p>
 <dl class="py exception">
 <dt class="sig sig-object py" id="fictional_bands.models.Question.DoesNotExist">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#fictional_bands.models.Question.DoesNotExist" title="Link to this definition"></a></dt>
@@ -344,7 +347,8 @@ object the first time, the query is executed.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="fictional_bands.views.authenticate_user_login">
 <span class="sig-prename descclassname"><span class="pre">fictional_bands.views.</span></span><span class="sig-name descname"><span class="pre">authenticate_user_login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fictional_bands/views.html#authenticate_user_login"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fictional_bands.views.authenticate_user_login" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>This authentication function authenticate if the user login details are accurate if so the user will be logged in.</p>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="fictional_bands.views.detail">
@@ -369,12 +373,24 @@ object the first time, the query is executed.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="fictional_bands.views.user_login">
 <span class="sig-prename descclassname"><span class="pre">fictional_bands.views.</span></span><span class="sig-name descname"><span class="pre">user_login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fictional_bands/views.html#user_login"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fictional_bands.views.user_login" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>If the user has an account already this function will be used</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>This return the user login page</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="fictional_bands.views.user_register">
 <span class="sig-prename descclassname"><span class="pre">fictional_bands.views.</span></span><span class="sig-name descname"><span class="pre">user_register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fictional_bands/views.html#user_register"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fictional_bands.views.user_register" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>This function will be used to register user to the app.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>This will return the registration page.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="fictional_bands.views.vote">

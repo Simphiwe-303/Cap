@@ -81,6 +81,11 @@
 <div class="viewcode-block" id="user_register">
 <a class="viewcode-back" href="../../fictional_bands.html#fictional_bands.views.user_register">[docs]</a>
 <span class="k">def</span> <span class="nf">user_register</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		This function will be used to register user to the app.</span>
+
+<span class="sd">		:returns: This will return the registration page.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
 	<span class="n">form</span> <span class="o">=</span> <span class="n">CreateUserForm</span><span class="p">()</span>
 
 	<span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s2">&quot;POST&quot;</span><span class="p">:</span>
@@ -97,6 +102,11 @@
 <div class="viewcode-block" id="user_login">
 <a class="viewcode-back" href="../../fictional_bands.html#fictional_bands.views.user_login">[docs]</a>
 <span class="k">def</span> <span class="nf">user_login</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		If the user has an account already this function will be used</span>
+
+<span class="sd">		:returns: This return the user login page</span>
+<span class="sd">	&quot;&quot;&quot;</span>
 	<span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;register_&amp;_login/login.html&#39;</span><span class="p">)</span></div>
 
 			
@@ -104,6 +114,9 @@
 <div class="viewcode-block" id="authenticate_user_login">
 <a class="viewcode-back" href="../../fictional_bands.html#fictional_bands.views.authenticate_user_login">[docs]</a>
 <span class="k">def</span> <span class="nf">authenticate_user_login</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		This authentication function authenticate if the user login details are accurate if so the user will be logged in.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
 	<span class="n">username</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">]</span>
 	<span class="n">password</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]</span>
 	<span class="n">user</span> <span class="o">=</span> <span class="n">authenticate</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">)</span>
