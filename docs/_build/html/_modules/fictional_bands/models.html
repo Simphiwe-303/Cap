@@ -80,6 +80,9 @@
 <div class="viewcode-block" id="Question">
 <a class="viewcode-back" href="../../fictional_bands.html#fictional_bands.models.Question">[docs]</a>
 <span class="k">class</span> <span class="nc">Question</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		This class create the Question model. This model will be used by admin to create question for for users to answer.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
 	<span class="n">question_text</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
 	<span class="n">pub_date</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="s1">&#39;date published&#39;</span><span class="p">)</span>
 
@@ -90,6 +93,9 @@
 <div class="viewcode-block" id="Choice">
 <a class="viewcode-back" href="../../fictional_bands.html#fictional_bands.models.Choice">[docs]</a>
 <span class="k">class</span> <span class="nc">Choice</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		This class create The Choice model. This model will also be used by the admin to create choices that a user can select from regarding the questions that will be created in the Question model.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
 	<span class="n">question</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Question</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">)</span>
 	<span class="n">choice_text</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
 	<span class="n">votes</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -101,6 +107,9 @@
 <div class="viewcode-block" id="CreateUserForm">
 <a class="viewcode-back" href="../../fictional_bands.html#fictional_bands.models.CreateUserForm">[docs]</a>
 <span class="k">class</span> <span class="nc">CreateUserForm</span><span class="p">(</span><span class="n">UserCreationForm</span><span class="p">):</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		This model will be used by users when registering themselves in order to view the application content.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
 <div class="viewcode-block" id="CreateUserForm.Meta">
 <a class="viewcode-back" href="../../fictional_bands.html#fictional_bands.models.CreateUserForm.Meta">[docs]</a>
 	<span class="k">class</span> <span class="nc">Meta</span><span class="p">():</span>
